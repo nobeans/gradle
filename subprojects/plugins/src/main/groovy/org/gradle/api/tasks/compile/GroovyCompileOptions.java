@@ -53,6 +53,8 @@ public class GroovyCompileOptions extends AbstractOptions {
 
     private File stubDir;
 
+    private boolean indy = false;
+
     /**
      * Tells whether the compilation task should fail if compile errors occurred. Defaults to (@code true}.
      */
@@ -204,6 +206,20 @@ public class GroovyCompileOptions extends AbstractOptions {
      */
     public void setStubDir(File stubDir) {
         this.stubDir = stubDir;
+    }
+
+    /**
+     * Tells whether to compiler using invoke dynamic. Defaults to (@code false}.
+     */
+    public boolean isIndy() {
+        return indy;
+    }
+
+    /**
+     * Sets whether to compiler using invoke dynamic. Defaults to (@code false}.
+     */
+    public void setIndy(boolean indy) {
+        this.indy = indy;
     }
 
     /**
